@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class DataTable,DBController;
+@interface ViewController : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate>
 
+@property (strong, nonatomic) IBOutlet UITableView *tblView;
+@property (strong, nonatomic) IBOutlet UIImageView *imgSaved;
+@property (strong, nonatomic) DBController* db;
+@property (strong, nonatomic) DataTable* StoreData;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionV;
 @end
